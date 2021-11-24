@@ -1,18 +1,18 @@
 import React from 'react';
-import { Avatar } from '../Avatar';
-import { Container, Content, User, Greeting, UserName, Message } from './styles';
+import { Container, Content, Greeting, UserName, Avatar } from './styles';
 
-export const Profile = () => {
+interface IProfile {
+	name: string;
+}
+
+export const Profile = ({ name }: IProfile) => {
 	return (
 		<Container>
-			<Avatar urlImage='https://avatars.githubusercontent.com/u/68981163?v=4' />
 			<Content>
-				<User>
-					<Greeting>Olá,</Greeting>
-					<UserName>Danilo</UserName>
-				</User>
-				<Message>Hoje é dia de vitória!</Message>
+				<Greeting>Olá,</Greeting>
+				<UserName>{name}</UserName>
 			</Content>
+			<Avatar source={{ uri: 'https://avatars.githubusercontent.com/u/68981163?v=4' }} />
 		</Container>
 	);
 };

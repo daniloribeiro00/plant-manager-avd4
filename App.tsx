@@ -7,7 +7,7 @@ import { theme } from './src/global/styles/theme';
 export default function App() {
 	return (
 		<>
-			<StatusBar barStyle='light-content' backgroundColor='transparent' translucent={true} />
+			<StatusBar barStyle='dark-content' backgroundColor='transparent' translucent={true} />
 			<ThemeProvider theme={theme}>
 				<Routes />
 			</ThemeProvider>
